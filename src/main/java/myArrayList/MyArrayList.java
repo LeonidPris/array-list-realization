@@ -3,6 +3,9 @@ package myArrayList;
 import java.util.Arrays;
 import java.util.Objects;
 
+// Хорошо, что подробно задокументировал, ведь такое и было задание
+// но не забывай, что на практике комменты должны быть сжаты, и должны создаваться только в тех местах,
+// где они действительно необходимы
 /**
  * Реализация интерфейса MyList. Является коллекцией элементов способной хранить элементы указанного типа <Т>
  * @author LeonidPris
@@ -40,10 +43,8 @@ public class MyArrayList<T> implements MyList<T> {
         if (arr.length > length) {
             arr[length++] = item;
         }
-        if (arr.length == length) {
-            increaseAndCopyArray();
-            arr[length++] = item;
-        }
+        increaseAndCopyArray(); // можно так упростить
+        arr[length++] = item;
     }
 
 
@@ -57,10 +58,10 @@ public class MyArrayList<T> implements MyList<T> {
      * */
     public void addByIdx(T item, int idx) {
         if (idx >= length) throw new ArrayIndexOutOfBoundsException();
-        if (arr.length == length + 1) increaseAndCopyArray();
+        if (arr.length == length + 1) increaseAndCopyArray(); // плохая практика использовать if без {}
 
         T oldItem;
-        for (int i = idx; i < length + 1; i++) { // может copyOfRange + stream?
+        for (int i = idx; i < length + 1; i++) { // может copyOfRange + stream? вполне, но так быстрее, поэтому хорошо
             oldItem = arr[i];
             arr[i] = item;
             item = oldItem;
@@ -83,7 +84,7 @@ public class MyArrayList<T> implements MyList<T> {
      * @throws ArrayIndexOutOfBoundsException будет выброшен, если коллекция пуста
      * */
     public T removeFirst() {
-        if (length == 0) throw new ArrayIndexOutOfBoundsException("Empty collection");
+        if (length == 0) throw new ArrayIndexOutOfBoundsException("Empty collection");// тут больше подойдет IllegalState
         T removedItem = arr[0];
         arr = Arrays.copyOfRange(arr, 1, length--);
         return removedItem;

@@ -30,6 +30,8 @@ class MyArrayListTest {
         assertEquals("1",arrayList.getByIdx(0));
     }
 
+    // имена методов не информативны
+    // не используется given when then
     @Test
     void add() {
         assertEquals(6, arrayList.length());

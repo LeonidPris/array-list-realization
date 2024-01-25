@@ -17,7 +17,7 @@ public interface MyList<T> {
      * @param item элемент, который должен быть помещен в коллекцию
      * @param idx индекс заменяемого на item элемента
      * */
-    void addByIdx(T item, int idx);
+    void addByIdx(T item, int idx);// достаточно просто add, ведь все понятно по аргументам
 
 
     /**
