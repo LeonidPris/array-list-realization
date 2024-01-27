@@ -7,7 +7,7 @@ import java.util.Objects;
  * Реализация интерфейса MyList. Является коллекцией элементов способной хранить элементы указанного типа <Т>
  * @author LeonidPris
  */
-public class MyArrayList<T> implements MyList<T> {
+public class MyArrayList<T> implements MyList<T>{
     /**
      * Поле arr являющеяся массивом элементов. Предназначаено для заполнения элементами.
      * */
@@ -55,9 +55,13 @@ public class MyArrayList<T> implements MyList<T> {
      * @param idx индекс заменяемого на item элемента
      * @throws ArrayIndexOutOfBoundsException будет выброшен, если idx для вставки будет превышать размер коллекции
      * */
-    public void addByIdx(T item, int idx) {
-        if (idx >= length) throw new ArrayIndexOutOfBoundsException();
-        if (arr.length == length + 1) increaseAndCopyArray();
+    public void add(T item, int idx) {
+        if (idx >= length){
+            throw new ArrayIndexOutOfBoundsException();
+        }
+        if (arr.length == length + 1){
+            increaseAndCopyArray();
+        }
 
         T oldItem;
         for (int i = idx; i < length + 1; i++) { // может copyOfRange + stream?
@@ -73,17 +77,21 @@ public class MyArrayList<T> implements MyList<T> {
      * @throws ArrayIndexOutOfBoundsException будет выброшен, если idx для вставки будет превышать размер коллекции
      * */
     public T getByIdx(int idx) {
-        if (idx >= length) throw new ArrayIndexOutOfBoundsException();
+        if (idx >= length){
+            throw new ArrayIndexOutOfBoundsException();
+        }
         return arr[idx];
     }
 
     /**
      * Метод возвращает первый элемент и удаляет его из коллекции.
      * Длинна коллекции при этом так-же уменьшается.
-     * @throws ArrayIndexOutOfBoundsException будет выброшен, если коллекция пуста
+     * @throws IllegalStateException будет выброшен, если коллекция пуста
      * */
     public T removeFirst() {
-        if (length == 0) throw new ArrayIndexOutOfBoundsException("Empty collection");
+        if (length == 0){
+            throw new IllegalStateException("Empty collection");
+        }
         T removedItem = arr[0];
         arr = Arrays.copyOfRange(arr, 1, length--);
         return removedItem;
@@ -100,9 +108,20 @@ public class MyArrayList<T> implements MyList<T> {
     /**
      * Метод возвращает длинну коллекции
      * */
-    public int length() {
+    public int size() {
         return length;
     }
+
+    /**
+     * Добавление другой коллекции к существующей
+     * */
+    public void addAll(MyList<T> list){
+        for (int i = 0; i < list.size(); i++) {
+            this.add(list.getByIdx(i));
+        }
+    }
+
+
     /**
      * Метод toString() переопределен таким образом, чтоб возвращать все элементы коллекции, но не массива arr
      * */

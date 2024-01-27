@@ -7,7 +7,6 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class MyArrayListTest {
     MyArrayList<String> arrayList;
-
     @BeforeEach
     void setUp() {
         arrayList = new MyArrayList<>();
@@ -21,42 +20,42 @@ class MyArrayListTest {
     }
 
     @Test
-    void length() {
-        assertEquals(6, arrayList.length());
+    void Given_CorrectSize() {
+        assertEquals(6, arrayList.size());
     }
 
     @Test
-    void getByIdx() {
+    void Given_CorrectElementByIdx() {
         assertEquals("1",arrayList.getByIdx(0));
     }
 
     @Test
-    void add() {
-        assertEquals(6, arrayList.length());
+    void Should_AddNewElementToTheEndOfCollection() {
+        assertEquals(6, arrayList.size());
         arrayList.add("7");
-        assertEquals(7, arrayList.length());
+        assertEquals(7, arrayList.size());
         assertEquals("7", arrayList.getByIdx(6));
     }
 
     @Test
-    void addByIdx() {
-        arrayList.addByIdx("99",0);
+    void Should_AddNewElementByIdx() {
+        arrayList.add("99",0);
         assertEquals("99", arrayList.getByIdx(0));
     }
 
 
     @Test
-    void removeFirst() {
+    void Should_RemoveFirstElement_And_ReduceLength() {
         assertEquals("1", arrayList.removeFirst());
-        assertEquals(5, arrayList.length());
+        assertEquals(5, arrayList.size());
     }
 
     @Test
-    void removeAll() {
+    void When_IdxOutOfBounds_Then_ThrowException() {
         arrayList.removeAll();
-        assertEquals(0, arrayList.length());
+        assertEquals(0, arrayList.size());
         assertThrows(ArrayIndexOutOfBoundsException.class, () ->{
-           arrayList.addByIdx("123", 5);
+           arrayList.add("123", 5);
         });
     }
 

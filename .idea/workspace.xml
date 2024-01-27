@@ -5,22 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3373817b-7e80-4f80-88be-7f98462572fb" name="Changes" comment="Array List realization">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/myArrayList/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/myArrayList/MyArrayList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/myArrayList/MyList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/maven/archetype.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/archetype-resources/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/archetype-resources/src/main/java/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/archetype-resources/src/test/java/AppTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/test/myArrayList/MyArrayListTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/myArrayList/MyCollections.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/myArrayList/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/myArrayList/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/myArrayList/MyArrayList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/myArrayList/MyArrayList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/myArrayList/MyList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/myArrayList/MyList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/test/myArrayList/MyArrayListTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/myArrayList/MyArrayListTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,12 +21,17 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="9c54abd26d3828bd9c505a3f4d993c62de06e975" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -103,6 +98,8 @@
       <list>
         <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.MyArrayListTest" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.MyArrayListTest" />
       </list>
     </recent_temporary>
   </component>
@@ -115,6 +112,14 @@
       <option name="presentableId" value="Default" />
       <updated>1706084137016</updated>
     </task>
+    <task id="LOCAL-00001" summary="Array List realization">
+      <created>1706181697184</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1706181697184</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

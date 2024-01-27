@@ -17,7 +17,12 @@ public interface MyList<T> {
      * @param item элемент, который должен быть помещен в коллекцию
      * @param idx индекс заменяемого на item элемента
      * */
-    void addByIdx(T item, int idx);
+    void add(T item, int idx);// достаточно просто add, ведь все понятно по аргументам
+
+    /**
+     *
+     * */
+    void addAll(MyList<T> list);
 
 
     /**
@@ -38,4 +43,6 @@ public interface MyList<T> {
      * Реализованный метод должен очищать всю коллекцию
      * */
     void removeAll();
+
+    int size();
 }
