@@ -2,6 +2,7 @@ package myArrayList;
 
 public class Main {
     public static void main(String[] args) {
+        // Зачем, у тебя же тесты?
         MyArrayList<String> arrayList = new MyArrayList<>(12);
         System.out.println("Заполнение коллекции."); // все "тесты" в main для наглядности
         arrayList.add("c");
